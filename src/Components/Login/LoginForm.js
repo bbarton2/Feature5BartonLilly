@@ -4,8 +4,7 @@ import { Link } from "react-router-dom"
 
 function LoginFormModule({ title }) {
     return (
-        <div>
-         <p> In login </p>
+        <div className="form1">
             <form>
                 <p>
                 User Name:

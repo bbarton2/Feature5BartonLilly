@@ -4,7 +4,7 @@ import React from "react";
 const SubscribeFormModule = () => {
     // in the future, we want to improve the CSS for this module
     return (
-      <div>
+      <div className="form1">
         <form>
         <p>
           First Name:
