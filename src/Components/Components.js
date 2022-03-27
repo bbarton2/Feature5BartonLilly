@@ -3,6 +3,8 @@ import Home from "./Home/Home"
 import SpecialsModule from "./Specials/Specials"
 import SubscribeModule from "./Subscribe/Subscribe"
 import LoginModule from "./Login/Login"
+import AuthModule from "./Auth/Auth";
+
 import { //need to import for Routing to work
   BrowserRouter as Router,
   Route,
@@ -23,6 +25,7 @@ export default function Components() {
           <Route path="/specials" component={SpecialsModule} />
           <Route path="/subscribe" component={SubscribeModule} />
           <Route path="/login" component={LoginModule} />
+          <Route path="/register" component={AuthModule} />
           <Redirect to="/home" />
         </Switch>
       </Router>
