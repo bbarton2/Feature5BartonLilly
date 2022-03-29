@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { createUser } from "./AuthService";
+import { createUser } from "../../Services/auth.service";
 import AuthForm from "./AuthForm";
 import Parse from "parse";
 import { link, useParams } from "react-router-dom";
