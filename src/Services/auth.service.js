@@ -26,8 +26,8 @@ export const createUser = (newUser) => {
 
 export const logIn = (existingUser) => {
   //login function
-  return existingUser
-    .logIn(existingUser.username, existingUser.password)
+  return Parse.User
+    .logIn(existingUser.email, existingUser.password)
     .then((result) => {})
     .catch((error) => {
       alert("Error: " + error.code + " " + error.message);
