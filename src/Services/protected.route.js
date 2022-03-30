@@ -18,7 +18,8 @@ const ProtectedRoute = ({ component: Component, flag, ...rest }) => {
     <div>
       <HeaderModule />
       {flag ? (
-        <Redirect to={rest.path+Parse.User.current().attributes.email} />
+        <Redirect to={rest.path+Parse.User.current().attributes.email} /> 
+        // dynamic path for redirect that uses parse
       ) : (
         <div>
           <p>You Do Not Have An Account Please Resiter Here!</p> 

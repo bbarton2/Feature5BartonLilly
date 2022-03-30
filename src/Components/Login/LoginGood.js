@@ -17,6 +17,7 @@ const LoginGood = () => {
   if (user && user.authenticated) {
       return <div>
         <HeaderModule />
+        {/* the text for the page when a user successfully logs in */}
         {user.attributes.email}  <hr /> Will add the page that will let them add specials 
         <br /> <br />  <button onClick={goBackHandler}>Home.</button>
         </div>;
