@@ -4,6 +4,9 @@ import SpecialsModule from "./Specials/Specials"
 import SubscribeModule from "./Subscribe/Subscribe"
 import LoginModule from "./Login/Login"
 import AuthModule from "./Auth/Auth";
+import LoginGood from "./Login/LoginGood"
+import LoginHome from "./Login/LoginHome"
+
 
 import { //need to import for Routing to work
   BrowserRouter as Router,
@@ -24,8 +27,9 @@ export default function Components() {
           <Route path="/home" exact component={Home} />
           <Route path="/specials" component={SpecialsModule} />
           <Route path="/subscribe" component={SubscribeModule} />
-          <Route path="/login" component={LoginModule} />
+          <Route path="/login" component={LoginHome} />
           <Route path="/register" component={AuthModule} />
+          <Route path="/user/Test1/Test2" component={LoginGood} />
           <Redirect to="/home" />
         </Switch>
       </Router>
