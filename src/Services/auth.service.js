@@ -31,6 +31,7 @@ export const logIn = (existingUser) => {
     .logIn(existingUser.email, existingUser.password)
     .then((result) => {
       console.log("Existing User After:", result)
+      return result
     })
     .catch((error) => {
       alert("Error: " + error.code + " " + error.message);

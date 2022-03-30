@@ -38,7 +38,7 @@ const LoginForm = ({ user, onChange, onSubmit }) => {
         <br />
         <br />
         
-        
+          
           <button type="submit" onSubmit={onSubmit} id="submitClicked">
             Submit
           </button>

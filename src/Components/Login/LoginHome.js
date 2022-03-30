@@ -11,11 +11,12 @@ const LoginHome = () => {
 
   useEffect(() => {
     let user = Parse.User.current();
-    console.log("userHere", user);
     if (user && user.authenticated) {
+      console.log("isUserAuth", user);
       console.log("GOOD");
       setFlag(true);
       urlName = urlName + user.attributes.email;
+      console.log("urlname",urlName)
     } else {
       console.log("BAD");
       setFlag(false);
