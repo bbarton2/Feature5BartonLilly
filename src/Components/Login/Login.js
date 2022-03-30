@@ -15,16 +15,14 @@ const LoginModule = () => {
 
   // flags in the state to watch for add/remove updates
   const [add, setAdd] = useState(false);
-  const [flag, setFlag] = useState(false);
+  
 
   // useEffect that run when changes are made to the state variable flags
   useEffect(() => {
     if (user && add) {
       console.log("user in Login.js", user)
       logIn(user).then((userLoggedIn) => {
-        if (userLoggedIn){
-          history.push("/loginhome")
-        }
+        history.push("/loginhome")
         setAdd(false);
       });
     }

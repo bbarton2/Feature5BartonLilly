@@ -7,7 +7,7 @@ const ProtectedRoute = ({ component: Component, flag, ...rest }) => {
   const goBackHandler = () => {
     history.push('/register');
   };
-  console.log("rest", rest); // show rest.path in the console
+  console.log("rest", rest.path); // show rest.path in the console
   // you could redirect back to /auth if the flag is not true
   return (
     <div>
