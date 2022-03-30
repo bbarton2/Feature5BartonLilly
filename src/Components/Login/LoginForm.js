@@ -4,7 +4,7 @@ import Parse from "parse";
 
 const LoginForm = ({ user, onChange, onSubmit }) => {
     const history = useHistory();
-    Parse.User.logOut();
+    
     const buttonHandler = () => {
       history.push("/loginhome");
     };  
@@ -39,7 +39,7 @@ const LoginForm = ({ user, onChange, onSubmit }) => {
         <br />
         
         
-          <button type="submit" onSubmit={onSubmit} onClick={buttonHandler} id="submitClicked">
+          <button type="submit" onSubmit={onSubmit} id="submitClicked">
             Submit
           </button>
           <br />

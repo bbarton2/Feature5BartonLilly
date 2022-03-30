@@ -6,26 +6,21 @@ import Parse from "parse"
 
 const LoginHome = () => {
   const [flag, setFlag] = useState(false);
-  let user = Parse.User.current();
+  
   let urlName = "/user/";
 
-  var check = false;
-
-  if (user && user.authenticated) {
-    console.log("AUTHENTICATED!");
-    urlName = urlName + user.attributes.email;
-    check = true;
-  }
-
   useEffect(() => {
-    if (check) {
+    let user = Parse.User.current();
+    console.log("userHere", user);
+    if (user && user.authenticated) {
       console.log("GOOD");
       setFlag(true);
+      urlName = urlName + user.attributes.email;
     } else {
       console.log("BAD");
       setFlag(false);
     }
-  }, [check]);
+  }, []);
   // In this case the flag is acquired through a check box but it could also be received from other methods
   // What is a Parse.User method that would help here?
 

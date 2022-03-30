@@ -20,7 +20,7 @@ const LoginModule = () => {
   // useEffect that run when changes are made to the state variable flags
   useEffect(() => {
     if (user && add) {
-      console.log("user", user)
+      console.log("user in Login.js", user)
       logIn(user).then((userLoggedIn) => {
         if (userLoggedIn){
           history.push("/loginhome")
