@@ -13,6 +13,7 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
       <form onSubmit={onSubmit} autoComplete="off">
         <div className="form-group">
           <label>First Name</label>
+          <br />
           <input
             type="text"
             className="form-control"
@@ -24,8 +25,10 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <label>Last Name</label>
+          <br />
           <input
             type="text"
             className="form-control"
@@ -37,8 +40,10 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             required
           />
         </div>{" "}
+        <br />
         <div className="form-group">
           <label>Email</label>
+          <br />
           <input
             type="email"
             className="form-control"
@@ -50,8 +55,10 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             required
           />
         </div>{" "}
+        <br />
         <div className="form-group">
           <label>Password</label>
+          <br />
           <input
             type="password"
             className="form-control"
@@ -64,13 +71,14 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <button type="submit" className="btn btn-primary" onSubmit={onSubmit}>
             Submit
           </button>
           <br />
           <br />
-          <button onClick={buttonHandler}>HOME</button>
+          <p>Already Have An Account </p> <button onClick={buttonHandler}>Login</button>
         </div>
       </form>
     </div>

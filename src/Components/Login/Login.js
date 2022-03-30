@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import { logIn } from "../../Services/auth.service";
 import LoginForm from "./LoginForm";
 import HeaderModule from "../Header/Header";
-import ProtectedRoute from "../../Services/protected.route";
-import LoginGood from "./LoginGood";
+import { useHistory } from "react-router";
 //import Parse from "parse";
 
 
 const LoginModule = () => {
-  
+  const history = useHistory();
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -23,9 +22,10 @@ const LoginModule = () => {
     if (user && add) {
       console.log("user", user)
       logIn(user).then((userLoggedIn) => {
-        // TODO: redirect user to main app
+        if (userLoggedIn){
+          history.push("/loginhome")
+        }
         setAdd(false);
-        setFlag(false)
       });
     }
   }, [user, add]);
@@ -46,9 +46,9 @@ const onSubmitHandler = (e) => {
     e.preventDefault();
     console.log("submitted: ", e.target);
     setAdd(true);
-    //console.log("Here's users");
-    //console.log(e.target);
   };
+
+
 
   return (
     <div>
@@ -58,12 +58,6 @@ const onSubmitHandler = (e) => {
             onChange={onChangeHandler}
             onSubmit={onSubmitHandler}
         />
-        <ProtectedRoute
-        exact
-        path = "/home"
-        flag={flag}
-        component={LoginGood}
-      />
     </div>
   );
 };
