@@ -27,7 +27,8 @@ export default function Components() {
           <Route path="/home" exact component={Home} />
           <Route path="/specials" component={SpecialsModule} />
           <Route path="/subscribe" component={SubscribeModule} />
-          <Route path="/login" component={LoginHome} />
+          <Route path="/login" component={LoginModule} />
+          <Route path="/loginhome" component={LoginHome} />
           <Route path="/register" component={AuthModule} />
           <Route path="/user/:email/" component={LoginGood} />
           <Redirect to="/home" />

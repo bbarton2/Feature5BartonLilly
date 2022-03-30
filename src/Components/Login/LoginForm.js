@@ -1,13 +1,14 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import Parse from "parse";
 
 const LoginForm = ({ user, onChange, onSubmit }) => {
     const history = useHistory();
-
+    
     const buttonHandler = () => {
-      history.push("/home");
+      history.push("/loginhome");
     };  
-  
+    
   return (
     <div className = "form1">
       <form onSubmit={onSubmit} autoComplete="off">
@@ -38,7 +39,7 @@ const LoginForm = ({ user, onChange, onSubmit }) => {
         <br />
         
         
-          <button type="submit" onSubmit={onSubmit}>
+          <button type="submit" onSubmit={onSubmit} id="submitClicked">
             Submit
           </button>
           <br />

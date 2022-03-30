@@ -1,21 +1,25 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import HeaderModule from "../Header/Header"
-// You must make sure to check this protected route even when manually typing in url
-// or you can easily bypass the auth
+import { useParams, Redirect } from "react-router-dom";
+import Parse from "parse";
+import HeaderModule from "../Header/Header";
 const LoginGood = () => {
-  const { email } = useParams();
-  console.log("In logingood");
+
+  let user = Parse.User.current();
+  
+  /*If either of these if statements failed, the user likely
+  /attempted to manually type in a user url*/
+  if (user && user.authenticated) {
+      return <div>
+        <HeaderModule />
+        Will add the page that will let them add specials 
+        </div>;
+    
+  }
+
   return (
     <div>
       <HeaderModule />
-      <h1>
-        {" "}
-        User: {email} {" "}
-      </h1>
-      <button>
-        <Link to="/login">Go back.</Link>
-      </button>
+      <Redirect to="/home" />
     </div>
   );
 };
