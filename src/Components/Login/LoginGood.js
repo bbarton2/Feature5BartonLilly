@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 // or you can easily bypass the auth
 const LoginGood = () => {
   const { firstname, lastname } = useParams();
+  console.log("In logingood");
   return (
     <div>
       <h1>

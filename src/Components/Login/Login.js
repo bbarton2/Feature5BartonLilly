@@ -4,6 +4,7 @@ import LoginForm from "./LoginForm";
 import HeaderModule from "../Header/Header";
 import ProtectedRoute from "../../Services/protected.route";
 import LoginGood from "./LoginGood";
+//import Parse from "parse";
 
 
 const LoginModule = () => {
@@ -29,7 +30,7 @@ const LoginModule = () => {
     }
   }, [user, add]);
 
-  const onChangeHandler = (e) => {
+const onChangeHandler = (e) => {
     e.preventDefault();
     console.log(e.target);
     const { name, value: newValue } = e.target;
@@ -41,12 +42,12 @@ const LoginModule = () => {
     });
   };
 
-  const onSubmitHandler = (e) => {
+const onSubmitHandler = (e) => {
     e.preventDefault();
     console.log("submitted: ", e.target);
     setAdd(true);
     //console.log("Here's users");
-    //console.log(Parse.user.getUsers());
+    //console.log(e.target);
   };
 
   return (
@@ -57,12 +58,12 @@ const LoginModule = () => {
             onChange={onChangeHandler}
             onSubmit={onSubmitHandler}
         />
-        <ProtectedRoute
+        {/* <ProtectedRoute
         exact
         path = "/home"
         flag={flag}
         component={LoginGood}
-      />
+      /> */}
     </div>
   );
 };
