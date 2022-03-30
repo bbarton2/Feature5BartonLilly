@@ -58,12 +58,12 @@ const onSubmitHandler = (e) => {
             onChange={onChangeHandler}
             onSubmit={onSubmitHandler}
         />
-        {/* <ProtectedRoute
+        <ProtectedRoute
         exact
         path = "/home"
         flag={flag}
         component={LoginGood}
-      /> */}
+      />
     </div>
   );
 };
