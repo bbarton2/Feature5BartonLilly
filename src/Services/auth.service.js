@@ -10,7 +10,6 @@ export const createUser = (newUser) => {
   user.set("password", newUser.password);
   user.set("email", newUser.email);
 
-  console.log("User: ", user);
   return user
     .signUp()
     .then((newUserSaved) => {
@@ -25,15 +24,15 @@ export const createUser = (newUser) => {
 };
 
 export const logIn = (existingUser) => {
-  //login function
-  console.log("Existing User Before :", existingUser)
+
   return Parse.User
     .logIn(existingUser.email, existingUser.password)
     .then((result) => {
-      console.log("Existing User After:", result)
       return result
     })
     .catch((error) => {
-      alert("Error: " + error.code + " " + error.message);
+      console.log("in error");
+      console.log(error);
+      alert(`Error: ${error.message}`);
     });
 };

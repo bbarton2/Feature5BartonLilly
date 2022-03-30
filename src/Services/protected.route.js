@@ -13,12 +13,12 @@ const ProtectedRoute = ({ component: Component, flag, ...rest }) => {
   
   console.log("rest", rest.path); // show rest.path in the console
   // you could redirect back to /auth if the flag is not true
-  var path = rest.path+Parse.User.current().attributes.email;
+  
   return (
     <div>
       <HeaderModule />
       {flag ? (
-        <Redirect to={path} />
+        <Redirect to={rest.path+Parse.User.current().attributes.email} />
       ) : (
         <div>
           <p>You Do Not Have An Account Please Resiter Here!</p> 
