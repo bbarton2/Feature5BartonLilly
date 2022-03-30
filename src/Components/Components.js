@@ -29,7 +29,7 @@ export default function Components() {
           <Route path="/subscribe" component={SubscribeModule} />
           <Route path="/login" component={LoginHome} />
           <Route path="/register" component={AuthModule} />
-          <Route path="/user/Test1/Test2" component={LoginGood} />
+          <Route path="/user/:email/" component={LoginGood} />
           <Redirect to="/home" />
         </Switch>
       </Router>

@@ -12,6 +12,7 @@ const LoginHome = () => {
   const [flag, setFlag] = useState(false);
   console.log("Here in LoginHome");
   let user = Parse.User.current();
+  let urlName = "/user/";
 
   console.log("User is: ", user);
   //console.log("Authentication", user.authenticated);
@@ -20,6 +21,7 @@ const LoginHome = () => {
 
   if (user && user.authenticated) {
     console.log("AUTHENTICATED!");
+    urlName = urlName + user.attributes.email;
     check = true;
   }
 
@@ -45,7 +47,7 @@ const LoginHome = () => {
         />
       <ProtectedRoute
         exact
-        path="/user/Test1/Test2"
+        path={urlName}
         flag={flag}
         component={LoginGood}
       />
