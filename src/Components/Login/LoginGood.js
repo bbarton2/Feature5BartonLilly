@@ -18,7 +18,7 @@ const LoginGood = () => {
       return <div>
         <HeaderModule />
         {user.attributes.email}  <hr /> Will add the page that will let them add specials 
-        <br /> <button onClick={goBackHandler}>Home.</button>
+        <br /> <br />  <button onClick={goBackHandler}>Home.</button>
         </div>;
     
   }
