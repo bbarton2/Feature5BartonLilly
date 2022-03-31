@@ -1,3 +1,6 @@
+- Merge pull request #9 from bbarton2/fixProtectedRouteBarton
+- added comments to the files describing what is going on.\
+- Merge pull request #8 from bbarton2/fixProtectedRouteBarton
 - protected route now brings to correct page.
 - Merge pull request #7 from bbarton2/AuthLilly
 - fixed some login issues

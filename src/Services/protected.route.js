@@ -1,18 +1,19 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router-dom";
-import HeaderModule from "../Components/Header/Header";
+import HeaderProtectedModule from "../Components/Header/HeaderProtected";
 import Parse from "parse";
 
 const ProtectedRoute = ({ component: Component, flag, ...rest }) => {
   const history = useHistory();
   const goBackHandler = () => {
+    //note that register is our auth files 
     history.push('/register');
   };
   // change the url to be personalized to the user
   // for the protected route 
   return (
     <div>
-      <HeaderModule />
+      <HeaderProtectedModule />
       {flag ? (
         <Redirect to={rest.path+Parse.User.current().attributes.email} />
       ) : (
