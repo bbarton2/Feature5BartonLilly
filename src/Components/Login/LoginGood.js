@@ -18,13 +18,14 @@ const LoginGood = () => {
   if (user && user.authenticated) {
       return <div>
         <HeaderModule />
+
         {user.attributes.email}  
         <hr /> 
         Will add the page that will let them add specials 
         <br /> <br />  
         <button onClick={goBackHandler}>Home.</button>
       </div>;
-    
+
   }
 
 };
