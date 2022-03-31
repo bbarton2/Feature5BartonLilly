@@ -5,7 +5,7 @@ import Parse from "parse";
 import { link, useParams } from "react-router-dom";
 
 const AuthRegisterModule = () => {
-  Parse.User.logOut();
+  
   const [newUser, setNewUser] = useState({
     firstName: "",
     lastName: "",

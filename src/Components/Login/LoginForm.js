@@ -1,13 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import Parse from "parse";
+
+//created the login form so it is only returning html because that is 
+// called in the Login module.
 
 const LoginForm = ({ user, onChange, onSubmit }) => {
-    const history = useHistory();
-    
-    const buttonHandler = () => {
-      history.push("/loginhome");
-    };  
     
   return (
     <div className = "form1">
