@@ -1,5 +1,10 @@
+- Merge branch 'main' of https://github.com/bbarton2/Feature5BartonLilly
+- made it so that the login / register cannot be accessed if logged in
+- Merge pull request #10 from bbarton2/AuthLilly
+- Merge branch 'main' into AuthLilly
 - Merge pull request #9 from bbarton2/fixProtectedRouteBarton
 - added comments to the files describing what is going on.\
+- made comments and made README.md
 - Merge pull request #8 from bbarton2/fixProtectedRouteBarton
 - protected route now brings to correct page.
 - Merge pull request #7 from bbarton2/AuthLilly
