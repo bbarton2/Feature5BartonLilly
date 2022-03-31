@@ -72,8 +72,8 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
           />
         </div>
         <br />
-        <div className="form-group">
-          <button type="submit" className="btn btn-primary" onSubmit={onSubmit}>
+        <div>
+          <button type="submit" onSubmit={onSubmit}>
             Submit
           </button>
           <br />

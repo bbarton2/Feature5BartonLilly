@@ -1,6 +1,6 @@
 import Parse from "parse";
 
-// used in auth register component
+// created the user in auth register
 export const createUser = (newUser) => {
   const user = new Parse.User();
 
@@ -23,6 +23,7 @@ export const createUser = (newUser) => {
     });
 };
 
+//logins the user in the Login module
 export const logIn = (existingUser) => {
 
   return Parse.User
@@ -31,8 +32,6 @@ export const logIn = (existingUser) => {
       return result
     })
     .catch((error) => {
-      console.log("in error");
-      console.log(error);
       alert(`Error: ${error.message}`);
     });
 };
