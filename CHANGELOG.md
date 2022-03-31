@@ -1,3 +1,21 @@
+- protected route now brings to correct page.
+- Merge pull request #7 from bbarton2/AuthLilly
+- fixed some login issues
+- Merge pull request #6 from bbarton2/getProtectedRouteBarton
+- was able to get loggin to fully work
+- Merge pull request #5 from bbarton2/getProtectedRouteBarton
+- trying to figure out where bug is
+- updated component file and added button handler
+- Merge pull request #4 from bbarton2/AuthLilly
+- made more fixes to authenticated page
+- Merge pull request #3 from bbarton2/AuthLilly
+- Got authentication to show up, routing is still buggy
+- Merge pull request #2 from bbarton2/addLoginAuthBarton
+- got login to work
+- Merge pull request #1 from bbarton2/AddPageForLoggedInBarton
+- added ability to regiser for the app -- having that inforation update to back 4 app
+- updated the css
+- updated change log
 - Merge pull request #10 from bbarton2/commentsLilly
 - added comments for routing (done by devin)
 - Merge pull request #9 from bbarton2/subscribeTestBarton

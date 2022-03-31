@@ -6,9 +6,9 @@ import Parse from "parse"
 
 const LoginHome = () => {
   const [flag, setFlag] = useState(false);
-  
-  let urlName = "/user/";
 
+  //check to see if the user is authenticated and then 
+  //set flag based on that 
   useEffect(() => {
     let user = Parse.User.current();
     if (user && user.authenticated) {
@@ -19,14 +19,13 @@ const LoginHome = () => {
       setFlag(false);
     }
   }, []);
-  // In this case the flag is acquired through a check box but it could also be received from other methods
-  // What is a Parse.User method that would help here?
-
+  
+  //if authenitcated send to this protected route
   return (
     <div>
       <ProtectedRoute
         exact
-        path={urlName}
+        path="/user/"
         flag={flag}
         component={LoginGood}
       />

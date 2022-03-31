@@ -3,17 +3,20 @@ import { logIn } from "../../Services/auth.service";
 import LoginForm from "./LoginForm";
 import HeaderModule from "../Header/Header";
 import { useHistory } from "react-router";
-//import Parse from "parse";
+
 
 
 const LoginModule = () => {
+
   const history = useHistory(); //in the future will want to clear history so that we can successfully log out users
+  //creating the user to have attributes, email and password
+
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
-  // flags in the state to watch for add/remove updates
+  //set flags
   const [add, setAdd] = useState(false);
   
 
@@ -51,6 +54,7 @@ const onSubmitHandler = (e) => {
   return (
     <div>
         <HeaderModule />
+        {/* Calling on the Login form to the login module */}
         <LoginForm
             user={user}
             onChange={onChangeHandler}
