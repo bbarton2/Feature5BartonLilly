@@ -5,7 +5,8 @@ import React from "react";
 
 const LoginForm = ({ user, onChange, onSubmit }) => {
     
-  return (
+  return ( 
+    // the login form
     <div className = "form1">
       <form onSubmit={onSubmit} autoComplete="off">
           <label>Email</label>

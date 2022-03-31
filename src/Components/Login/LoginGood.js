@@ -24,7 +24,7 @@ const LoginGood = () => {
         <br /> <br />  
         <button onClick={goBackHandler}>Home.</button>
       </div>;
-    
+
   }
 
 };

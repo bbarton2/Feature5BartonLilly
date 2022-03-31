@@ -31,6 +31,7 @@ export default function Components() {
           <Route path="/loginhome" component={LoginHome} />
           <Route path="/register" component={AuthModule} />
           <Route path="/user/:email/" component={LoginGood} />
+          {/* We used a dynamic route with the :email for when the user successfully logs in */}
           <Redirect to="/home" />
         </Switch>
       </Router>

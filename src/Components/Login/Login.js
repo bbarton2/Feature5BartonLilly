@@ -7,8 +7,10 @@ import { useHistory } from "react-router";
 
 
 const LoginModule = () => {
-  const history = useHistory();
+
+  const history = useHistory(); //in the future will want to clear history so that we can successfully log out users
   //creating the user to have attributes, email and password
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -23,7 +25,7 @@ const LoginModule = () => {
     if (user && add) {
       console.log("user in Login.js", user)
       logIn(user).then((userLoggedIn) => {
-        history.push("/loginhome")
+        history.push("/loginhome") //redirects us to home page after trying to log in
         setAdd(false);
       });
     }
@@ -33,7 +35,7 @@ const onChangeHandler = (e) => {
     e.preventDefault();
     console.log(e.target);
     const { name, value: newValue } = e.target;
-    console.log(newValue);
+    console.log(newValue); //button handler for logging in
 
     setUser({
       ...user,
